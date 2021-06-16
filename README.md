@@ -1,11 +1,15 @@
 # Wound_Size_Measurement
  
-對於wound的偵測分割，使用的方法是region growing的方法作測試，而我套用的function是 Dirk-Jan Kroon 所提供的version 1.0.0.0，網址為 : https://www.mathworks.com/matlabcentral/fileexchange/19084-region-growing。
-    針對此function進行更改後，操作方式為滑鼠指標可以讓使用者自由選擇想要進行偵測分割的位置點，region growing演算法就會計算此點附近周圍灰階值接近的點為一個區域(region)，而灰階值接近的標準是可以自己做設定的，程式碼裡的變數為 ”reg_maxdist”。
-    而wound size的判斷，在這裡我是計算分割出的區域pixels數量作判斷，再由區域pixels數量去除整張圖的整體pixels數量，進而得到wound佔整體影像上的比值，如此一來才可針對一般JPG影像和IR影像的wound偵測比較。
+   對於wound的偵測分割，使用的方法是region growing的方法作測試，而我套用的function是 Dirk-Jan Kroon 所提供的version 1.0.0.0，網址為 : https://www.mathworks.com/matlabcentral/fileexchange/19084-region-growing。
+
+   針對此function進行更改後，操作方式為滑鼠指標可以讓使用者自由選擇想要進行偵測分割的位置點，region growing演算法就會計算此點附近周圍灰階值接近的點為一個區域(region)，而灰階值接近的標準是可以自己做設定的，程式碼裡的變數為 ”reg_maxdist”。
+   
+   而wound size的判斷，在這裡我是計算分割出的區域pixels數量作判斷，再由區域pixels數量去除整張圖的整體pixels數量，進而得到wound佔整體影像上的比值，如此一來才可針對一般JPG影像和IR影像的wound偵測比較。
  
 ![image](https://user-images.githubusercontent.com/73085151/122198148-787be300-cecb-11eb-8aa6-bff2a7aee425.png)
 操作示意圖(圖一)
+
+
 1.	針對JPG影像
     叉叉圖案為滑鼠指標所點位置，白色區域為傷口偵測的區域。
     
@@ -14,6 +18,7 @@ JPG影像偵測結果(圖二)
 
 ![image](https://user-images.githubusercontent.com/73085151/122198217-8af61c80-cecb-11eb-89c2-ba71f6a3c516.png)
 wound size比值(表一)
+
 
 2.	針對IR影像
 
