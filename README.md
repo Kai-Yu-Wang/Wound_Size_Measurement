@@ -1,4 +1,4 @@
-# Wound_Size_Measurement
+# Wound Size Measurement
  
    對於wound的偵測分割，使用的方法是region growing的方法作測試，而我套用的function是 Dirk-Jan Kroon 所提供的version 1.0.0.0，網址為 : https://www.mathworks.com/matlabcentral/fileexchange/19084-region-growing。
 
@@ -19,12 +19,6 @@
 JPG影像偵測結果(圖二)
 
 
-![image](https://user-images.githubusercontent.com/73085151/122198217-8af61c80-cecb-11eb-89c2-ba71f6a3c516.png)
-
-wound size比值(表一)
-
-
-
 ## 2.	針對IR影像
 
 如果直接將原本IR影像去作region growing的效果非常的差，所以必須作前處理，才能將傷口分割出來。
@@ -39,19 +33,3 @@ wound size比值(表一)
 ![image](https://user-images.githubusercontent.com/73085151/122198479-c5f85000-cecb-11eb-8a34-1cff10ed34e6.png)
 
 IR影像偵測結果(圖四)
-
-
-![image](https://user-images.githubusercontent.com/73085151/122198503-cb559a80-cecb-11eb-8cb5-d1c2eab60694.png)
-
-wound size比值(表二)
-
-
-wound size比值比較觀察：
-    針對JPG影像和IR影像的觀察，比值差別分別為 :
-    
-hjiof	  jgeo   	anvd
-JPG	        0.0149	 0.0048	 0.007
-IR	         0.0082	 0.0148	 0.0083
-difference  0.0067	 0.01	   0.0013
-
-由此統整表可以觀察到anvd影像的傷口偵測區域是非常接近的，接下來是jgeo影像，傷口區域相差較大的是hjiof影像。
